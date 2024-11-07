@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="output.css">
-  <title>Arduino Blog - Projeler</title>
+  <title>Arduino Blog</title>
   <link href="../output.css" rel="stylesheet">
   <style>
     /* Fade-in efekti */
@@ -53,6 +53,10 @@
       transform: translateY(-2px);
     }
   </style>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2964755747044989"
+  crossorigin="anonymous"></script>
+
 </head>
 <body class="bg-slate-950 text-gray-200">
 
@@ -75,7 +79,8 @@
           <li><a href="../index.html" class="block py-2 px-3 md:p-0 text-gray-300 rounded hover:bg-gray-700" aria-current="page">Ana Sayfa</a></li>
           <li><a href="./about.html" class="block py-2 px-3 md:p-0 text-gray-300 rounded hover:bg-gray-700">Hakkında</a></li>
           <li><a href="./projects.html" class="block py-2 px-3 md:p-0 text-blue-300 hover:text-white">Projeler</a></li>
-          <li><a href ="./contact.html" class="block py-2 px-3 md:p-0 text-gray-300 rounded hover:bg-gray-700">İletişim</a></li>
+          <li><a href="./contact.html" class="block py-2 px-3 md:p-0 text-gray-300 rounded hover:bg-gray-700">İletişim</a></li>
+          <!-- block py-2 px-3 md:p-0 text-blue-300 hover:text-white -->
         </ul>
       </div>
     </div>
@@ -84,19 +89,9 @@
   <main class="max-w-screen-xl mx-auto p-4 fade-in">
     <h1 class="text-4xl font-bold text-white mb-6">Arduino Blog: Projeler ve Bilgiler</h1>
 
-    <div class="mb-6">
-      <h2 class="text-2xl font-bold text-white mb-4">Kategoriler</h2>
-      <div class="flex space-x-4">
-        <button class="bg-blue-600 text-white px-4 py-2 rounded" onclick="filterProjects('all')">Tüm Projeler</button>
-        <button class="bg-gray-700 text-white px-4 py-2 rounded" onclick="filterProjects('elektronik')">Elektronik</button>
-        <button class="bg-gray-700 text-white px-4 py-2 rounded" onclick="filterProjects('robotik')">Robotik</button>
-        <button class="bg-gray-700 text-white px-4 py-2 rounded" onclick="filterProjects('iot')">IoT</button>
-      </div>
-    </div>
-
-    <div id="project-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Blog Post 1 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card elektronik">
+      <div class="bg-gray-800 rounded-lg shadow-md p-4 card">
         <h2 class="text-2xl font-bold mb-2">LED Blinking Project</h2>
         <p class="text-gray-300 mb-4">Bu projede, Arduino kullanarak LED'in nasıl yanıp söndürüleceğini öğrenin. Temel programlama ve devre tasarımı hakkında bilgi edineceksiniz.</p>
         <img src="images/led.png" alt="Arduino Project 1" class="rounded-lg mb-4">
@@ -104,7 +99,7 @@
       </div>
 
       <!-- Blog Post 2 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card elektronik">
+      <div class="bg-gray-800 rounded-lg shadow-md p-4 card">
         <h2 class="text-2xl font-bold mb-2">Temperature Sensor with Arduino</h2>
         <p class="text-gray-300 mb-4">Arduino ile sıcaklık sensörü kullanarak çevre sıcaklığını nasıl ölçebileceğinizi keşfedin. Proje detayları ve kod örnekleri burada.</p>
         <img src="images/temputure.png" alt="Arduino Project 2" class="rounded-lg mb-4">
@@ -112,57 +107,27 @@
       </div>
 
       <!-- Blog Post 3 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card iot">
+      <div class="bg-gray-800 rounded-lg shadow-md p-4 card">
         <h2 class="text-2xl font-bold mb-2">Arduino IoT Project</h2>
         <p class="text-gray-300 mb-4">Internet of Things (IoT) uygulamaları için Arduino kullanarak nasıl veri toplayabileceğinizi ve uzaktan kontrol edebileceğinizi öğrenin.</p>
         <img src="images/iot.png" alt="Arduino Project 3" class="rounded-lg mb-4">
         <a href="./content3.html" class="text-blue-500 hover:underline">Devamını Oku</a>
       </div>
 
-      <!-- Blog Post 4 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card robotik">
+      <div class="bg-gray-800 bg-opacity-80 rounded-lg shadow-md p-4 card">
         <h2 class="text-2xl font-bold mb-2">Arduino Robotics Project</h2>
         <p class="text-gray-300 mb-4">Arduino kullanarak robotik sistemler tasarlayın ve motorları, sensörleri kontrol edin. Temel robotik ilkeleri öğrenin.</p>
         <img src="images/robotics.png" alt="Arduino Project 4" class="rounded-lg mb-4">
         <a href="./content4.html" class="text-blue-500 hover:underline">Devamını Oku</a>
       </div>
 
-      <!-- Blog Post 5 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card elektronik">
-        <h2 class="text-2xl font-bold mb-2">Smart Home Automation</h2>
-        <p class="text-gray-300 mb-4">Arduino ile ev otomasyonu projeleri yaparak ışıkları, termostatları ve diğer cihazları uzaktan kontrol edin.</p>
-        <img src="images/homeatumation.png" alt="Arduino Project 5" class="rounded-lg mb-4">
-        <a href="./content5.html" class="text-blue-500 hover:underline">Devamını Oku</a>
+      <!-- Call to Action -->
+      <div class="col-span-1 md:col-span-2 bg-gray-800 rounded-lg shadow-md p-4">
+        <h2 class="text-2xl font-bold mb-2">Join the Arduino Community!</h2>
+        <p class="text-gray-300 mb-4">Arduino ile ilgili daha fazla bilgi edinmek ve projelerinizi paylaşmak için topluluğumuza katılın. Haydi başlayalım!</p>
+        <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 cta-button">Join Now</button>
       </div>
-
-      <!-- Blog Post 6 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card iot">
-        <h2 class="text-2xl font-bold mb-2">Arduino Weather Station</h2>
-        <p class="text-gray-300 mb-4">Hava durumu verilerini toplayarak sıcaklık, nem ve basınç ölçümleri yapabileceğiniz bir istasyon oluşturun.</p>
-        <img src="images/weather_station.png" alt="Arduino Project 6" class="rounded-lg mb-4">
-        <a href="./content6.html" class="text-blue-500 hover:underline">Devamını Oku</a>
-      </div>
-
-      <!-- Blog Post 7 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card robotik">
-        <h2 class="text-2xl font-bold mb-2">Line Following Robot</h2>
-        <p class="text-gray-300 mb-4">Arduino ile bir çizgi takip eden robot yaparak sensörleri ve motorları nasıl kullanacağınızı öğrenin.</p>
-        <img src="images/line_follower.png" alt="Arduino Project 7" class="rounded-lg mb-4">
-        <a href="./content7.html" class="text-blue-500 hover:underline">Devamını Oku</a>
-      </div>
-
-      <!-- Blog Post 8 -->
-      <div class="bg-gray-800 rounded-lg shadow-md p-4 card elektronik">
-        <h2 class="text-2xl font-bold mb-2">Arduino Smart Garden</h2>
-        <p class="text-gray-300 mb-4">Bitkilerinizi sulamak için otomatik bir sistem kurarak Arduino ile bahçenizi akıllı hale getirin.</p>
-        <img src="images/smart_garden.png" alt="Arduino Project 8" class="rounded-lg mb-4">
-        <a href="./content8.html" class="text-blue-500 hover:underline">Devamını Oku</a>
-      </div>
-    </div>
-
-    <div class="flex justify-between mt-6">
-      <button id="prev-btn" class="bg-blue-600 text-white px-4 py-2 rounded" onclick="changePage(-1)">Önceki</button>
-      <button id="next-btn" class="bg-blue-600 text-white px-4 py-2 rounded" onclick="changePage(1)">Sonraki</button>
+      
     </div>
   </main>
 
@@ -173,51 +138,35 @@
   </footer>
 
   <script>
+    function toggleNavbar() {
+      const navbar = document.getElementById('navbar-cta');
+      navbar.classList.toggle('hidden');
+      navbar.classList.toggle('flex');
 
-  if (window.history.replaceState) {
-          const currentUrl = window.location.href;
-          const newUrl = currentUrl.replace(/\.html$/, ''); // .html uzantısını kaldır
-          window.history.replaceState(null, null, newUrl);
-  }
-
-
-    let currentPage = 1;
-    const projectsPerPage = 4;
-    const projects = document.querySelectorAll('.card');
-    const totalPages = Math.ceil(projects.length / projectsPerPage);  
-
-    function displayProjects() {
-      projects.forEach((project, index) => {
-        project.style.display = 'none'; // Tüm projeleri gizle
-        if (index >= (currentPage - 1) * projectsPerPage && index < currentPage * projectsPerPage) {
-          project.classList.add('fade-in'); // Fade-in sınıfını ekle
-          project.style.display = 'block'; // Geçerli sayfadaki projeleri göster
-        }
-      });
-      document.getElementById('prev-btn').style.display = currentPage === 1 ? 'none' : 'inline-block';
-      document.getElementById('next-btn').style.display = currentPage === totalPages ? 'none' : 'inline-block';
+      // Fade-in efekti ekle
+      if (navbar.classList.contains('flex')) {
+        navbar.classList.add('navbar-fade-in');
+        setTimeout(() => {
+          navbar.classList.remove('navbar-fade-in');
+        }, 500); // 500ms sonra sınıfı kaldır
+      }
     }
 
-    function changePage(direction) {
-      currentPage += direction;
-      displayProjects();
+    // Sadece .html uzantısını gizle
+    if (window.history.replaceState) {
+        const currentUrl = window.location.href;
+        const newUrl = currentUrl.replace(/\.html$/, ''); // .html uzantısını kaldır
+        window.history.replaceState(null, null, newUrl);
     }
 
-    function filterProjects(category) {
-      projects.forEach(project => {
-        if (category === 'all' || project.classList.contains(category)) {
-          project.style.display = 'block';
-        } else {
-          project.style.display = 'none';
-        }
-      });
-      currentPage = 1; // Filtreleme sonrası sayfayı sıfırla
-      displayProjects();
-    }
-
-    // Sayfa yüklendiğinde projeleri göster
-    displayProjects();
+    // if (!checkAccess()) {
+    //   // Eğer kullanıcı giriş yapmamışsa, burayı yönlendirebilirsiniz
+    //   window.location.href = "index.html"; // Ana sayfaya yönlendir
+    // }
+    
   </script>
 
 </body>
 </html>
+
+
